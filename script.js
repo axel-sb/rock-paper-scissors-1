@@ -1,6 +1,8 @@
-console.clear();
+// variables to track player and computer score
 let uScore = 0;
 let cScore = 0;
+
+// get computer's choice
 const computerPlay = () => {
     var comp = Math.floor(Math.random() * 3) + 1;
     
@@ -13,6 +15,8 @@ const computerPlay = () => {
     }
 }
 
+
+// get user's score
 const playerSelection = (choice) => {
     choice = choice.toLowerCase();
     if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
@@ -23,7 +27,7 @@ const playerSelection = (choice) => {
     
 }
 
-
+// determine winner
 const playRound = (playerSelection, computerPlay) => {
     // console.log(playerSelection,computerPlay)
     if (playerSelection === "rock") {
@@ -62,24 +66,26 @@ const playRound = (playerSelection, computerPlay) => {
     
 }
 
+// play game and declare winner
 const playGame = () => {
     
     for(var i = 0; i < 5; i++){
         const userChoice = playerSelection(prompt("Choose a choice: Rock, Paper or Scissors"));
         const computerChoice = computerPlay();
-        let result = console.log(playRound(userChoice, computerChoice));
-    console.log(`You threw: ${userChoice}`);
-    console.log(`The computer threw: ${computerChoice}`);
-    console.log(`Your score: ${uScore}\nComputer score: ${cScore}`)
-}
-if(uScore > cScore){
-    console.log('\nHooray! You won this round.')
-} else if(uScore < cScore){
-    console.log('\nOops! You lost this round')
-} else{
-    console.log('\nDraw! So close.')
-}
+        let result = playRound(userChoice, computerChoice);
+        console.log(`You threw: ${userChoice}`);
+        console.log(`The computer threw: ${computerChoice}`);
+        console.log(result);
+        console.log(`Your score: ${uScore}\nComputer score: ${cScore}\n`)
+    }
+    if(uScore > cScore){
+        console.log('\nHooray! You won this round.')
+    } else if(uScore < cScore){
+        console.log('\nOops! You lost this round.')
+    } else{
+        console.log('\nDraw! That was close.')
+    }
 
 };
-// playGame();
-setTimeout(playGame(), 9000)
+
+playGame();
