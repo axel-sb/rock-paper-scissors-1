@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Chilanka&display=swap" rel="stylesheet">
     <title>Rock-Paper-Scissors</title>
 </head>
+
 <body>
-    
+    <main>
+        <div class="rule">
+            <h1 class="rule-header">Rock Paper Scissors</h1>
+            <h4 class="rule-overview">Rock paper scissors is a classic two player game.
+                Each player chooses either rock, paper, or scissors.
+                The items are compared, and whichever player chooses the more powerful item wins.</h4>
+                <ul>
+                The possible outcomes are:
+                <li>Rock destroys scissors.</li>
+                <li>Scissors cut paper.</li>
+                <li>Paper covers rock.</li>
+                If there’s a tie, then the game ends in a draw.
+                <br><br>
+                First to get 5 points wins!
+            </ul>
+        </div>
+
+        <div class="button">
+            <button class="rock">Rock</button>
+            <button class="paper">Paper</button>
+            <button class="scissors">Scissors</button>
+            
+        </div>
+        <div class="game">
+            <p class="userChoice"></p>
+            <p class="computerChoice"></p>
+            <p class="result"></p>
+            <p class="score"></p>
+            <p class="round"></>
+        </div>
+
+        <div>
+            <span class="restart">Play Again?</span>
+        </div>
+    </main>
+    <script src="./new script.js"></script>
 </body>
+
 </html>
