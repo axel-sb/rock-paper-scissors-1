@@ -1,0 +1,61 @@
+.rule-header, .rule-overview{
+    text-align: center;
+}
+
+body{
+    box-sizing: border-box;
+    background: linear-gradient(-78deg, rgb(53, 35, 145), rgb(134, 46, 46));
+    font-family: 'Chilanka', cursive;
+    line-height: 20px;
+    font-size: 20px;
+}
+
+main{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: blueviolet;
+    font-weight: bold;
+    border: none;
+    height: 30px;
+    width: 70px;
+    box-shadow: 2px 5px 3px #ccc;
+    cursor: pointer;
+}
+
+button:hover{
+    height: 35px;
+    width: 75px;
+}
+
+.game{
+    height: 180px;
+    /* border: 1px solid #000; */
+    margin: 15px 0;
+    padding-left: 40px;
+}
+
+.restart{
+    color: #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    display: none;
+}
+
+.restart:hover{
+    font-size: 30px;
+}
+
+div:last-child{
+    display: flex;
+    justify-content: center;
+}
