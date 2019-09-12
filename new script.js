@@ -4,7 +4,7 @@ let cScore = 0;
 
 let buttons = document.querySelectorAll('button');
 let game = document.querySelector('.game')
-let reset = document.querySelector('span')
+let reset = document.querySelector('.restart')
 
 
 // get computer's choice
@@ -88,6 +88,7 @@ const playGame = (e) => {
     } else if(uScore < cScore){
         roundDiv.textContent = ('Oops! You lost this round.😟')
             reset.style.display = 'initial'
+            roundDiv.style.color = 'red'
             endGame();
     } else{
         if(uScore == cScore){
